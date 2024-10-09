@@ -394,6 +394,7 @@ section.vacatures{
     padding: 32px;
     border-top: var(--bor);
     border-bottom: var(--bor);
+    margin-bottom: 128px;
 
     .vacature{
         display: flex;
