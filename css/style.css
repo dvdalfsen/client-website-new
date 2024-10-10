@@ -61,6 +61,7 @@ h4{
 a {
     text-decoration: none;
     font-size: 16px;
+    /* font-weight: 400; */
 }
 
 img {
@@ -98,7 +99,7 @@ img {
 	    padding: 8px;
 		color: var(--black);
 		text-transform: uppercase;
-		font-weight: var(--fw-bold);
+		font-weight: 700;
 	}
 
 	&::after {
@@ -135,7 +136,7 @@ img {
 	span {
 		color: var(--primary);
 		text-transform: uppercase;
-		font-weight: var(--fw-bold);
+		font-weight: 700;
 	}
 
 	&::after {
@@ -438,7 +439,7 @@ section.vacatures{
 
             a{
                 text-transform: uppercase;
-                font-weight: 800;
+                font-weight: 700;
                 color: var(--primary);
             }
         }
@@ -451,4 +452,39 @@ section.vacatures{
         margin: 0;
        }
 
+}
+
+section.nieuws{
+
+    display: flex;
+    flex-direction: row;
+
+    .main-item{
+        padding: 32px;
+        width: 100%;
+        border-bottom:var(--bor);
+        border-top: var(--bor);
+
+        img{
+            padding-bottom: 64px;
+        }
+
+        .type{
+            border: var(--bor);
+            text-transform: uppercase;
+            padding-inline: 4px;
+            line-height: 1;
+            width: fit-content;
+            margin-bottom: 32px;
+        }
+
+        .text-container{
+            
+            p{
+                text-transform: uppercase;
+            }
+
+           
+        }
+    }
 }
