@@ -13,17 +13,28 @@ html{
 body{
     position: relative;
     font-family: "Archivo", system-ui;
-    margin: 16px;
+    margin: 0px;
     color: var(--black);
     background: var(--white);
     border: solid var(--black) 2px;
     line-height: 2;
     padding: var(--padding);
 
+    @media (min-width:640px) {
+        margin: 16px;
+    }
+
 }
 
 main{
-    padding-top: 128px;
+    padding-top: 32px;
+    @media (min-width: 640px) {
+        padding-top: 64px;
+    }
+
+    @media (min-width: 1280px) {
+        padding-top: 128px;
+    }
 }
 
 h1,
@@ -40,21 +51,41 @@ p {
     line-height: 1;
 }
 
-h1,
+h1{
+    text-transform: uppercase;
+    font-size: 48px;
+
+    @media (min-width: 640px) {
+        font-size: 96px;
+    }
+}
+
 h2{
     text-transform: uppercase;
-    font-size: 64px;
+    font-size: 40px;
+
+    @media (min-width: 640px) {
+        font-size: 64px;
+    }
 }
 
 h3{
-    font-size: 48px;
+    font-size: 32px;
     text-transform: uppercase;
+
+    @media (min-width: 640px) {
+        font-size: 48px;
+    }
 }
 
 h4{
-    font-size: 32px;
+    font-size: 24px;
     /* text-transform: uppercase; */
     font-weight: 400;
+
+    @media (min-width: 640px) {
+        font-size: 32px;
+    }
 }
 
 
@@ -158,11 +189,15 @@ img {
 .header{
     top: 0;
     height: 128px;
-    padding: 32px;
+    padding: 16px;
     display: flex;
     flex-direction: row;
     justify-content: space-between;
     align-items: center;
+
+    @media (min-width: 640px) {
+        padding: 32px;
+    }
 
     .image-container{
 
@@ -173,6 +208,11 @@ img {
 
     .nav{
         
+        display: none;
+
+        @media (min-width: 1280px) {
+            display: block;
+        }
         li{
             text-transform: uppercase;
             margin-right: 32px;
@@ -208,7 +248,12 @@ img {
 
     }
     .button-container{
+        display: none;
         padding-right: 64px;
+
+        @media (min-width: 640px) {
+            display: flex;
+        }
     }
 }
 
@@ -219,15 +264,19 @@ section.hero{
     display: flex;
     justify-content: center;
     align-items: center;
-    padding-bottom: 128px;
+    padding-bottom: 64px;
+    
+    @media (min-width: 640px) {
+        padding-bottom: 128px;
+    }
 
     .text-hero{
-        padding: 64px 64px 32px 64px;
         text-align: center;
 
-        h1{
-            font-size: 96px;
+        @media (min-width: 640px) {
+            padding: 64px 64px 32px 64px;
         }
+
     }
 
     .button-container{
@@ -241,7 +290,11 @@ section.auto-slider{
 
     display: flex;
     flex-direction: column;
-    margin-bottom: 128px;
+    margin-bottom: 64px;
+    
+    @media (min-width: 640px) {
+        margin-bottom: 128px;
+    }
 
     .row-1{
 
@@ -270,16 +323,25 @@ section.intro{
     display: flex;
     justify-content: center;
     align-items: center;
-    padding-bottom: 128px;
+    padding-bottom: 64px;
+
+    @media (min-width: 640px) {
+        padding-bottom: 128px;
+    }
 
     .text-intro{
         display: flex;
         position: relative;
         flex-direction: column;
-        padding: 64px 64px 32px 64px;
         text-align: center;
         justify-content: center;
         align-items: center;
+        padding: 32px;
+        
+        @media (min-width: 640px) {
+            padding: 64px 64px 32px 64px;
+        }
+        
 
         .type{
             position: absolute;
@@ -299,24 +361,25 @@ section.intro{
 section.events{
 
     display: flex;
-    flex-direction: row;
+    flex-direction: column;
     margin-bottom: 128px;
+    border-top: var(--bor);
+    border-bottom: var(--bor);
     
     @media (min-width: 640px) {
-        border-bottom: var(--bor);
-        border-top: var(--bor);
+        flex-direction: row;
         
     }
   
 
     .main-item{
-        flex-basis: 33%;
         padding: 32px;
-
-
+        border-bottom: var(--bor);
+        
         @media (min-width: 640px) {
-
+            flex-basis: 33%;
             border-right: var(--bor);
+            border-bottom: none;
         }
 
         img{
@@ -343,15 +406,17 @@ section.events{
     }
 
     .list{
-        /* flex-basis: 67%; */
-        width: 100%;
         /* padding: 32px; */
-        padding-inline: 32px;
         position: relative;
+        padding-inline: 8px;
+        
+        @media (min-width: 640px) {
+            padding-inline: 32px;
+            width: 100%;
+        }
 
         .item{
-
-            width: 100%;
+            /* width: 100%; */
             /* width: max-content; */
             border-bottom: var(--bor);
             margin-top: 16px;
@@ -392,18 +457,27 @@ section.vacatures{
 
     display: flex;
     flex-direction: column;
-    padding: 32px;
+    padding: 16px;
     border-top: var(--bor);
     border-bottom: var(--bor);
     margin-bottom: 128px;
 
+    @media (min-width:640px) {
+        padding: 32px;
+    }
+
     .vacature{
         display: flex;
-        flex-direction: row;
-        justify-content: space-between;
+        flex-direction: column;
         border-bottom: var(--bor);
         padding-bottom: 32px;
         margin-bottom: 32px;
+        gap: 32px;
+        
+        @media (min-width:640px) {
+            justify-content: space-between;
+            flex-direction: row;
+        }
 
         h4{
             flex-basis: 25%;
@@ -457,13 +531,22 @@ section.vacatures{
 section.nieuws{
 
     display: flex;
-    flex-direction: row;
+    flex-direction: column;
+
+    @media (min-width:640px) {
+        flex-direction: row;
+    }
 
     .main-item{
-        padding: 32px;
-        width: 100%;
+        padding: 16px;
+        /* width: 100%; */
         border-bottom:var(--bor);
         border-top: var(--bor);
+
+        @media (min-width:640px) {
+            padding: 32px;
+            width: 100%;
+        }
 
         img{
             padding-bottom: 64px;
