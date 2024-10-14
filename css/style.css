@@ -8,6 +8,10 @@ html{
     --bor: solid #222226 2px;
 
     --fw-bold: 800;
+
+    * {
+        box-sizing: border-box;
+    }
 }
 
 body{
@@ -131,17 +135,19 @@ img {
 		color: var(--black);
 		text-transform: uppercase;
 		font-weight: 700;
+        background-color: var(--white);
 	}
 
-	&::after {
+	&::before {
 		content: "";
+        /* display: block; */
 		position: absolute;
 		width: 48px;
 		height: 100%;
 		right: -2px;
 		border: var(--bor);
 		border-left: 0px;
-		/* background-image: url('/assets/icons/icon.svg'); */
+		background-image: url('/assets/icons/icon.svg');
 		background-size: 24px;
 		background-position: center;
 		background-repeat: no-repeat;
@@ -151,9 +157,9 @@ img {
 
 	&:hover,
 	&:focus {
-		&::after {
+		&::before {
 			right: -50px;
-			background-image: url("../assets/icons/icon.svg");
+			/* background-image: url("../assets/icons/icon.svg"); */
 		}
 	}
 }
