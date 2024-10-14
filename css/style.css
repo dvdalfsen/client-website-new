@@ -569,9 +569,18 @@ section.nieuws{
 
            
         }
+
         &:nth-of-type(2){
-            border: var(--bor);
+            border-top: none;
+            border-bottom: none;
+        }
+
+        @media (min-width:640px) {
+            
+            &:nth-of-type(2){
+                border: var(--bor);
             }
+        }
     }
 
 }
