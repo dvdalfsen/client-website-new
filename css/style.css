@@ -542,7 +542,7 @@ section.nieuws{
         /* width: 100%; */
         border-bottom:var(--bor);
         border-top: var(--bor);
-
+        /* border: var(--bor); */
         @media (min-width:640px) {
             padding: 32px;
             width: 100%;
@@ -569,5 +569,9 @@ section.nieuws{
 
            
         }
+        &:nth-of-type(2){
+            border: var(--bor);
+            }
     }
+
 }
