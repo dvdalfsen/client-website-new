@@ -77,7 +77,7 @@ h3{
     font-size: 32px;
     text-transform: uppercase;
 
-    @media (min-width: 640px) {
+    @media (min-width: 850px) {
         font-size: 48px;
     }
 }
@@ -279,7 +279,11 @@ section.hero{
     .text-hero{
         text-align: center;
 
-        @media (min-width: 640px) {
+        p{
+            padding-inline: 16px;
+        }
+
+        @media (min-width: 850px) {
             padding: 64px 64px 32px 64px;
         }
 
@@ -468,7 +472,7 @@ section.vacatures{
     border-bottom: var(--bor);
     margin-bottom: 128px;
 
-    @media (min-width:640px) {
+    @media (min-width:850px) {
         padding: 32px;
     }
 
@@ -480,7 +484,7 @@ section.vacatures{
         margin-bottom: 32px;
         gap: 32px;
         
-        @media (min-width:640px) {
+        @media (min-width:850px) {
             justify-content: space-between;
             flex-direction: row;
         }
@@ -539,7 +543,7 @@ section.nieuws{
     display: flex;
     flex-direction: column;
 
-    @media (min-width:640px) {
+    @media (min-width:850px) {
         flex-direction: row;
     }
 
@@ -549,7 +553,7 @@ section.nieuws{
         border-bottom:var(--bor);
         border-top: var(--bor);
         /* border: var(--bor); */
-        @media (min-width:640px) {
+        @media (min-width:850px) {
             padding: 32px;
             width: 100%;
         }
@@ -581,7 +585,7 @@ section.nieuws{
             border-bottom: none;
         }
 
-        @media (min-width:640px) {
+        @media (min-width:850px) {
             
             &:nth-of-type(2){
                 border: var(--bor);
