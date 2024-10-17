@@ -200,9 +200,11 @@ img {
     flex-direction: row;
     justify-content: space-between;
     align-items: center;
+    border-bottom: var(--bor);
 
     @media (min-width: 640px) {
         padding: 32px;
+        border: none;
     }
 
     .image-container{
@@ -278,10 +280,10 @@ section.hero{
 
     .text-hero{
         text-align: center;
-
-        p{
+        padding-inline: 16px;
+        /* p{
             padding-inline: 16px;
-        }
+        } */
 
         @media (min-width: 850px) {
             padding: 64px 64px 32px 64px;
