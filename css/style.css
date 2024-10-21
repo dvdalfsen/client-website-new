@@ -21,8 +21,10 @@ body{
     color: var(--black);
     background: var(--white);
     border: solid var(--black) 2px;
+    border-top: none;
     line-height: 2;
     padding: var(--padding);
+    /* overflow: hidden; */
 
     @media (min-width:640px) {
         margin: 16px;
@@ -201,10 +203,17 @@ img {
     justify-content: space-between;
     align-items: center;
     border-bottom: var(--bor);
+    border-top: var(--bor);
+    position: sticky;
+    background-color: var(--white);
+    z-index: 100;
+    /* margin-top: 16px; */
+
 
     @media (min-width: 640px) {
-        padding: 32px;
-        border: none;
+        /* padding: 32px; */
+        /* border: none; */
+        border-top: var(--bor);
     }
 
     .image-container{
