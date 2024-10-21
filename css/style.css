@@ -77,7 +77,7 @@ h3{
     font-size: 32px;
     text-transform: uppercase;
 
-    @media (min-width: 850px) {
+    @media (min-width: 1280px) {
         font-size: 48px;
     }
 }
@@ -261,6 +261,7 @@ img {
 
         @media (min-width: 640px) {
             display: flex;
+            flex-direction: row-reverse;
         }
     }
 }
@@ -378,7 +379,7 @@ section.events{
     border-top: var(--bor);
     border-bottom: var(--bor);
     
-    @media (min-width: 640px) {
+    @media (min-width: 850px) {
         flex-direction: row;
         
     }
@@ -390,6 +391,9 @@ section.events{
         
         @media (min-width: 640px) {
             flex-basis: 33%;
+        }
+        
+        @media (min-width: 850px) {
             border-right: var(--bor);
             border-bottom: none;
         }
