@@ -656,6 +656,7 @@ section.text-small{
             border-bottom: solid var(--black) 2px;
             font-size: 16px;
             color: #666666;
+            border-radius: 0px;
         }
 
         textarea, input { outline: none; }
