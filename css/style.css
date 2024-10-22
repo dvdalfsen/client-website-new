@@ -77,9 +77,10 @@ h2{
 
 h3{
     font-size: 32px;
-    text-transform: uppercase;
-
+    font-weight: 400;
+    
     @media (min-width: 1280px) {
+        text-transform: uppercase;
         font-size: 48px;
     }
 }
@@ -87,7 +88,7 @@ h3{
 h4{
     font-size: 24px;
     /* text-transform: uppercase; */
-    font-weight: 400;
+    font-weight: 500;
 
     @media (min-width: 640px) {
         font-size: 32px;
@@ -197,6 +198,7 @@ img {
 .header{
     top: 0;
     height: 128px;
+    /* width:max-content; */
     padding: 16px;
     display: flex;
     flex-direction: row;
@@ -204,10 +206,10 @@ img {
     align-items: center;
     border-bottom: var(--bor);
     border-top: var(--bor);
-    position: sticky;
+    /* position: fixed; */
     background-color: var(--white);
     z-index: 100;
-    /* margin-top: 16px; */
+    margin-top: 16px;
 
 
     @media (min-width: 640px) {
@@ -242,19 +244,20 @@ img {
                 text-decoration: none;
 
                 &::after {    
-                    bottom: -2px;
+                    bottom: -4px;
                     content: "";
                     display: block;
                     height: 2px;
                     left: 50%;
                     position: absolute;
-                    background: var(--primary);
+                    background: var(--black);
                     transition: all 0.25s ease;
                     width: 0;
                   }
 
                   &:hover{
 
+                    color: var(--primary);
                     &::after { 
                         width: 100%; 
                         left: 0; 
@@ -608,4 +611,62 @@ section.nieuws{
         }
     }
 
+}
+
+section.text-small{
+    display: flex;
+    flex-direction: column;
+    padding: 32px;
+    border-bottom: var(--bor);
+
+    @media (min-width:1080px) {
+        padding: 64px;
+        flex-direction: row;
+        justify-content: space-between;
+    }
+
+    .text{
+        h4{
+           @media (min-width:1080px) {
+            padding: 0;
+           }
+        }
+    }
+
+    .form-container{
+        display: flex;
+        flex-direction: column;
+        gap: 32px;
+
+        @media (min-width:1080px) {
+            flex-direction: row;
+            flex-basis: 50%;
+            gap: 64px;
+        }
+
+        form{
+            width: 100%;
+        }
+        input{
+            width: 100%;
+            padding: 0;
+            padding-bottom: 4px;
+            border-top: none;
+            border-inline: none;
+            border-bottom: solid var(--black) 2px;
+            font-size: 16px;
+            color: #666666;
+        }
+
+        textarea, input { outline: none; }
+
+
+        .button-container{
+            margin-inline: auto;
+
+            @media (min-width:1080px) {
+                padding-right: 64px;
+            }
+        }
+    }
 }
