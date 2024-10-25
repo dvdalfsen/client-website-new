@@ -20,13 +20,13 @@ body{
     margin: 0px;
     color: var(--black);
     background: var(--white);
-    border: solid var(--black) 2px;
     border-top: none;
     line-height: 2;
     padding: var(--padding);
     /* overflow: hidden; */
-
+    
     @media (min-width:640px) {
+        border: solid var(--black) 2px;
         margin: 16px;
     }
 
