@@ -150,7 +150,7 @@ img {
 		right: -2px;
 		border: var(--bor);
 		border-left: 0px;
-		background-image: url('/assets/icons/icon.svg');
+		background-image: url('../assets/icons/icon.svg');
 		background-size: 24px;
 		background-position: center;
 		background-repeat: no-repeat;
