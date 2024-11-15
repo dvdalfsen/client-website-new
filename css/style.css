@@ -95,6 +95,15 @@ h4{
     }
 }
 
+h5{
+    font-size: 24px;
+    font-weight: 500;
+
+    @media (min-width: 1080px) {
+        font-size: 28px;
+    }
+}
+
 
 a {
     text-decoration: none;
@@ -209,10 +218,10 @@ img {
     /* position: fixed; */
     background-color: var(--white);
     z-index: 100;
-    margin-top: 16px;
-
-
+    
+    
     @media (min-width: 640px) {
+        margin-top: 16px;
         /* padding: 32px; */
         /* border: none; */
         border-top: var(--bor);
@@ -668,6 +677,50 @@ section.text-small{
             @media (min-width:1080px) {
                 padding-right: 64px;
             }
+        }
+    }
+}
+
+section.signup{
+
+    .company{
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        height: 544px;
+
+        .row-1{
+            
+            display: flex;
+            flex-direction: row;
+            gap: 0px;
+            overflow: scroll;
+            scrollbar-width: none;
+        }
+
+        .row-2{
+            display: flex;
+            flex-direction: row;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+
+
+            img{
+                display: none;
+                @media (min-width:640px) {
+                    display: block;
+                }
+            }
+        }
+
+        .row-3{
+                
+            display: flex;
+            flex-direction: row;
+            gap: 0px;
+            overflow: scroll;
+            scrollbar-width: none;
         }
     }
 }
