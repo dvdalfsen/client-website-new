@@ -682,7 +682,7 @@ section.text-small{
 }
 
 section.signup{
-
+    border-bottom: var(--bor);
     .company{
         display: flex;
         flex-direction: column;
